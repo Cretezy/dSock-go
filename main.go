@@ -20,6 +20,13 @@ func NewClient(url string, token string) *DSockClient {
 	}
 }
 
+func NewCloudClient(projectId string, key string) *DSockClient {
+	return &DSockClient{
+		url:   "https://api.dsock.cloud/" + projectId,
+		token: key,
+	}
+}
+
 type DSockError struct {
 	Message  string
 	Code     string
