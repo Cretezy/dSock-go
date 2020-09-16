@@ -56,8 +56,6 @@ func (client *DSockClient) CreateClaim(options CreateClaimOptions) (*Claim, erro
 
 	var result createClaimResponse
 
-	println(string(response))
-
 	err = json.Unmarshal(response, &result)
 	if err != nil {
 		return nil, err
